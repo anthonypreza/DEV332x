@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
 
 namespace PrescriptionManager
 {
@@ -62,6 +63,42 @@ namespace PrescriptionManager
                     // An unexpected error occurred.
                     MessageBox.Show(ex.Message);
                 }
+                return false;
+            }
+        }
+
+        public async Task<bool> IsUserInGroup(string groupId)
+        {
+            try
+            {
+                var body = new JObject
+                {
+                    ["groupId"] = groupId,
+                    ["memberId"] = AuthResult.UserInfo.UniqueId
+                };
+
+                var client = new HttpClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", AuthResult.AccessToken);
+
+                var request = new HttpRequestMessage
+                {
+                    RequestUri = new Uri($"{Settings.GraphApiEndpoint}{Settings.Tenant}/isMemberOf?api-version={Settings.GraphApiVersion}"),
+                    Method = HttpMethod.Post
+                };
+                request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                request.Content = new StringContent(body.ToString(), Encoding.UTF8, "application/json");
+
+                var responseMessage = await client.SendAsync(request);
+                responseMessage.EnsureSuccessStatusCode();
+
+                var jsonResult = await responseMessage.Content.ReadAsStringAsync();
+
+                var result = JObject.Parse(jsonResult);
+                var isMemberOf = result["value"]?.Value<bool>();
+                return isMemberOf ?? false;
+            }
+            catch
+            {
                 return false;
             }
         }

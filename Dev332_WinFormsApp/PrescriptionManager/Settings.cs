@@ -19,5 +19,6 @@ namespace PrescriptionManager
         public static string GraphApiEndpoint => ConfigurationManager.AppSettings["ida:GraphApiEndpoint"];
         public static Uri RedirectUri => new Uri(ConfigurationManager.AppSettings["ida:RedirectUri"]);
         public static string Authority => String.Format(CultureInfo.InvariantCulture, AadInstance, Tenant);
+        public static string PrescriptionManagerUsersGroupId => "b73d16a9-fb03-40a1-b301-bf2634865fd8";
     }
 }

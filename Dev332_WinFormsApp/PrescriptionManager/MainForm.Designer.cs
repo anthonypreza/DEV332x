@@ -104,7 +104,7 @@
             this.newPrescriptions.TabIndex = 24;
             this.newPrescriptions.Text = "New Prescriptions";
             this.newPrescriptions.UseVisualStyleBackColor = true;
-            this.newPrescriptions.Click += new System.EventHandler(this.newPrescriptions_Click);
+            this.newPrescriptions.Click += new System.EventHandler(this.NewPrescriptions_Click);
             // 
             // deletePrescriptions
             // 
@@ -114,7 +114,7 @@
             this.deletePrescriptions.TabIndex = 23;
             this.deletePrescriptions.Text = "Delete Prescriptions";
             this.deletePrescriptions.UseVisualStyleBackColor = true;
-            this.deletePrescriptions.Click += new System.EventHandler(this.deletePrescriptions_Click);
+            this.deletePrescriptions.Click += new System.EventHandler(this.DeletePrescriptions_Click);
             // 
             // repeatPrescriptions
             // 
@@ -124,7 +124,7 @@
             this.repeatPrescriptions.TabIndex = 22;
             this.repeatPrescriptions.Text = "Repeat Prescriptions";
             this.repeatPrescriptions.UseVisualStyleBackColor = true;
-            this.repeatPrescriptions.Click += new System.EventHandler(this.repeatPrescriptions_Click);
+            this.repeatPrescriptions.Click += new System.EventHandler(this.RepeatPrescriptions_Click);
             // 
             // prescriptionsGridView
             // 
@@ -198,7 +198,7 @@
             this.patientsGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.patientsGridView.Size = new System.Drawing.Size(556, 100);
             this.patientsGridView.TabIndex = 18;
-            this.patientsGridView.SelectionChanged += new System.EventHandler(this.patientsGridView_SelectionChanged);
+            this.patientsGridView.SelectionChanged += new System.EventHandler(this.PatientsGridView_SelectionChanged);
             // 
             // PatientID
             // 
@@ -277,7 +277,7 @@
             this.go.TabIndex = 4;
             this.go.Text = "Go";
             this.go.UseVisualStyleBackColor = true;
-            this.go.Click += new System.EventHandler(this.go_Click);
+            this.go.Click += new System.EventHandler(this.Go_Click);
             // 
             // toDatePicker
             // 

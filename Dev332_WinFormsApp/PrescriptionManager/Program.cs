@@ -23,7 +23,14 @@ namespace PrescriptionManager
 
             if (loggedIn)
             {
-                Application.Run(new MainForm());
+                if (await authManager.IsUserInGroup(Settings.PrescriptionManagerUsersGroupId))
+                {
+                    Application.Run(new MainForm());
+                }
+                else
+                {
+                    MessageBox.Show("The current user is not a member of the PrescriptionManagerUsers group!");
+                }
             }
         }
     }

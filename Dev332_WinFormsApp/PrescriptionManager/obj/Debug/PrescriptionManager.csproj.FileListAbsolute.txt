@@ -23,3 +23,6 @@ C:\Users\admin\Documents\c0de\apps\DEV332x\Dev332_WinFormsApp\PrescriptionManage
 C:\Users\admin\Documents\c0de\apps\DEV332x\Dev332_WinFormsApp\PrescriptionManager\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 C:\Users\admin\Documents\c0de\apps\DEV332x\Dev332_WinFormsApp\PrescriptionManager\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
 C:\Users\admin\Documents\c0de\apps\DEV332x\Dev332_WinFormsApp\PrescriptionManager\obj\Debug\PrescriptionManager.csproj.CopyComplete
+C:\Users\admin\Documents\c0de\apps\DEV332x\Dev332_WinFormsApp\PrescriptionManager\bin\Debug\Newtonsoft.Json.dll
+C:\Users\admin\Documents\c0de\apps\DEV332x\Dev332_WinFormsApp\PrescriptionManager\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\admin\Documents\c0de\apps\DEV332x\Dev332_WinFormsApp\PrescriptionManager\bin\Debug\Newtonsoft.Json.xml

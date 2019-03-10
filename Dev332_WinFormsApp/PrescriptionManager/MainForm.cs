@@ -31,7 +31,7 @@ namespace PrescriptionManager
             DisplayPatients();
         }
 
-        private void patientsGridView_SelectionChanged(object sender, EventArgs e)
+        private void PatientsGridView_SelectionChanged(object sender, EventArgs e)
         {
             DisplayPrescriptions();
         }
@@ -94,7 +94,7 @@ namespace PrescriptionManager
             return query.First();
         }
 
-        private void repeatPrescriptions_Click(object sender, EventArgs e)
+        private void RepeatPrescriptions_Click(object sender, EventArgs e)
         {
             // Get the highlighted prescriptions in the prescriptionsGridView.
             DataGridViewSelectedRowCollection selectedRows = prescriptionsGridView.SelectedRows;
@@ -116,7 +116,7 @@ namespace PrescriptionManager
             DoSave();
         }
 
-        private void deletePrescriptions_Click(object sender, EventArgs e)
+        private void DeletePrescriptions_Click(object sender, EventArgs e)
         {
             // Get the highlighted prescriptions in the prescriptionsGridView.
             DataGridViewSelectedRowCollection selectedRows = prescriptionsGridView.SelectedRows;
@@ -138,7 +138,7 @@ namespace PrescriptionManager
             DoSave();
         }
 
-        private void newPrescriptions_Click(object sender, EventArgs e)
+        private void NewPrescriptions_Click(object sender, EventArgs e)
         {
             // Get the highlighted patient ID in the patientsGridView.
             int patientID = (int)patientsGridView.CurrentRow.Cells["PatientID"].Value;
@@ -195,7 +195,7 @@ namespace PrescriptionManager
 
         #region View by Date tab - display data
 
-        private void go_Click(object sender, EventArgs e)
+        private void Go_Click(object sender, EventArgs e)
         {
             // Clear the prescriptionsInPeriodGridView.
             prescriptionsInPeriodGridView.Rows.Clear();
