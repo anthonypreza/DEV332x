@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ContosoMedicalDataClasses">
+  <DataContextMoniker Name="/ContosoMedicalDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="52cf0298-3121-42e1-9fc9-4c9cb9766f1e" absoluteBounds="3.5, 0.75, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/ContosoMedicalDataClassesDataContext/Prescription" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f319b4d-76ad-474b-b12d-d86d158887a5" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cdd16dac-cb3a-4e3b-b1c2-4074e1970b3d" absoluteBounds="1, 0.5, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/ContosoMedicalDataClassesDataContext/Patient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e3a4bb3d-ffdb-4fa6-80f9-5f63319260b7" absoluteBounds="1.0150000000000001, 0.96, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 1.41959757486979); (3.5 : 1.41959757486979)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ContosoMedicalDataClassesDataContext/Patient/Patient_Prescription" />
+      <nodes>
+        <classShapeMoniker Id="cdd16dac-cb3a-4e3b-b1c2-4074e1970b3d" />
+        <classShapeMoniker Id="52cf0298-3121-42e1-9fc9-4c9cb9766f1e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
